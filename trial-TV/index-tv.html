@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMDB-Movie-App</title>
+    <title>TV-Shows-App</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style-amit.css">
+    <title>TV-Shows-App</title>
+    <link rel="stylesheet" href="styles-tv.css">
 </head>
 
 <body>
@@ -28,6 +29,8 @@
             <input type="text" placeholder="Search" class="search" id="search">
         </form>
     </header>
+
+    <!-- Insert categories based on the release year -->
     <div id="tags">
         <!-- <div class="tag">Action</div>
         <div class="tag">Adventure</div>
@@ -35,21 +38,7 @@
         <div class="tag">Comedy</div> -->
     </div>
 
-    <!-- Full screen Overlay Navigation from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp-->
-    <div id="myNav" class="overlay">
-
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-        <!-- Overlay content -->
-        <div class="overlay-content" id="overlay-content">
-            <!-- <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a> -->
-        </div>
-
-    </div>
+    <!-- Display the TV shows  -->
     <main id="main">
         <!-- <div class="movie">
             <img src="https://images.unsplash.com/photo-1574267432309-3c7d5ed31b9e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGhlYXRlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="image">
@@ -88,13 +77,7 @@
             </div>
         </div> -->
     </main>
-
-    <div class="pagination">
-        <div class="page disabled" id="prev">Previous Page</div>
-        <div class="current" id="current">1</div>
-        <div class="page" id="next">Next Page</div>
-    </div>
-    <script src="script-amit.js"></script>
+    <script src="javascript-tv.js"></script>
 </body>
 
 </html>
