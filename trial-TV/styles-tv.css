@@ -41,7 +41,7 @@ header {
     color: #fefae0;
 }
 
-.movie {
+.tv {
     width: 300px;
     margin: 1rem;
     background-color: var(--secondary-color);
@@ -52,7 +52,7 @@ header {
     /* height: 350px; */
 }
 
-.movie img {
+.tv img {
     width: 100%;
     /* height: 270px; */
 }
@@ -63,7 +63,7 @@ main {
     justify-content: center;
 }
 
-.movie-info{
+.tv-info{
     color: white;
     display: flex;
     align-items: center;
@@ -71,6 +71,28 @@ main {
     padding: 0.5rem 1rem 1rem;
     letter-spacing: 0.5px;
     gap:0.2rem;
+}
+.tv-info h3 {
+    margin-top: 0;
+}
+
+.tv-info span {
+    background-color: #7209b7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.tv-info span.green{
+    color: green;
+}
+
+.tv-info span.orange{
+    color: orange;
+}
+
+.tv-info span.red{
+    color: red;
 }
 
 
@@ -87,7 +109,7 @@ main {
     transition: transform 0.5s ease-in;
 }
 
-.movie:hover .overview{
+.tv:hover .overview{
     transform: translateY(0);
 }
 
@@ -158,3 +180,68 @@ main {
     padding: 10px 20px;
     margin-top: 5px;
 }
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  /* css ends from <!-- Full screen Overlay Navigation from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp--> */
+  
+  .embed.hide {
+      display: none;
+  }
+  
+  .embed.show {
+      display: inline-block;
+  }

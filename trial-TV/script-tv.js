@@ -221,8 +221,8 @@ function showTVshows(results) {
   main.innerHTML = ''
   for (let i = 0; i < results.length; i++) {
     let tvEl = document.createElement('div');
-    tvEl.classList.add('movie');
-    tvEl.innerHTML = `<img src="${img_path}${results[i].poster_path}" alt="${results[i].title}" <div class="movie-info"><h3>${results[i].name}</h3><span class="${getColor(results[i].vote_average)}">${results[i].vote_average}</span></div><div class="overview"><h3>Overview</h3>${results[i].overview}<br/><button class="know-more" id="${results[i].id}">Know More</button></div>`;
+    tvEl.classList.add('tv');
+    tvEl.innerHTML = `<img src="${img_path}${results[i].poster_path}" alt="${results[i].title}" <div class="tv-info"><h3>${results[i].name}</h3><span class="${getColor(results[i].vote_average)}">${results[i].vote_average}</span></div><div class="overview"><h3>Overview</h3>${results[i].overview}<br/><button class="know-more" id="${results[i].id}">Know More</button></div>`;
     
     main.appendChild(tvEl)
 
