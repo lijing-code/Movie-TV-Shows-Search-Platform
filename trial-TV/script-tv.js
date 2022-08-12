@@ -1,16 +1,3 @@
-// let api_url =
-// "https://unogsng.p.rapidapi.com/search?type=series&start_year=2020&orderby=rating&limit=100&subtitle=english&offset=0&end_year=2021";
-
-//   let search_api = 'https://unogsng.p.rapidapi.com/search?type=series&query=';
-
-// let form = document.getElementById('form')
-// let search = document.getElementById('search')
-// let main = document.getElementById('main')
-// let tagsEl = document.getElementById("tags")
-
-
-
-
 let base_url = "https://api.themoviedb.org/3"
 let api_url =
   'https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=97b02d3f0196ff4ae8de221437c48834';
@@ -148,7 +135,7 @@ function clearButton(){
         let clrBtn = document.createElement('div')
     clrBtn.classList.add('tag', 'highlight')
     clrBtn.id = 'clear';
-    clrBtn.innerText = 'Clear-Year'
+    clrBtn.innerText = 'Clear-Genre'
     clrBtn.addEventListener('click', function(){
       selectedGenre = [];
       setGenre();
@@ -160,7 +147,6 @@ function clearButton(){
 
 getTVshows(api_url)
 
-//Hightlight the years filter when the user click the year buttons
 function highlightSelectedGenre(){
     let tags = document.querySelectorAll(".tag")
 
@@ -168,8 +154,8 @@ function highlightSelectedGenre(){
         tags[z].classList.remove("highlight")
     }
     clearButton()
-    if(selectedYears.length !== 0){
-        for(let i = 0; i < selectedYears.length; i++){
+    if(selectedGenre.length !== 0){
+        for(let i = 0; i < selectedGenre.length; i++){
             let highlightedTag = document.getElementById(selectedGenre[i])
             highlightedTag.classList.add('highlight')
         }
